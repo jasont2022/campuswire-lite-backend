@@ -13,9 +13,8 @@ const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/campuswi
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useFindAndModify: false,
 })
-
-mongoose.set('useFindAndModify', false)
 
 app.use(express.json())
 
@@ -29,6 +28,11 @@ app.use(
 
 app.use('/account', AccountRouter)
 app.use('/api', QuestionRouter)
+
+app.use((err, _req, res, _next) => {
+  console.log(err.stack)
+  res.status(500).send(`${err}`)
+})
 
 app.listen(3000, () => {
   console.log('listening to 3000')

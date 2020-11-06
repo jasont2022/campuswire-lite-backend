@@ -2,7 +2,7 @@
   "name": "campuswire-lite-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,17 +10,18 @@
   "author": "Jason Tran",
   "license": "ISC",
   "dependencies": {
+    "babel-eslint": "^10.1.0",
     "cookie-session": "^1.4.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.10.11",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.0",
-    "babel-eslint": "^10.1.0"
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11"
   },
   "devDependencies": {
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jsx-a11y": "^6.3.0",
     "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4 || ^3 || ^2.3.0 || ^1.7.0"
+    "eslint-plugin-react-hooks": "^4 || ^3 || ^2.3.0 || ^1.7.0",
+    "nodemon": "^2.0.6"
   }
 }
